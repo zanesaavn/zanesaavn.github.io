@@ -1,0 +1,287 @@
+<!doctype html>
+<html dir="ltr" lang="en">
+<head>
+    <title>JioSaavn Ad Template - Showcase</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+
+    <style>
+        * { border: none; box-sizing: border-box; margin: 0; outline: none; padding: 0; }
+        html, body { height: 56.25vw; font-family: 'Lato', sans-serif; overflow: hidden; }
+        #ad-wrapper { background-color: #4696C1; align-items: center; height: 56.25vw; padding: 0 5vw; }
+        #ad-wrapper h1 { margin-bottom: 2vw; color: #fff; ze: 5vw; line-height: 1.1; text-align: center;  }
+        #ad-wrapper h3 { color: #fff; text-align: center; font-size: 5vw; text-align: left;}
+        #ad-wrapper p { margin-bottom: 6vw; color: #b1e1f7; ze: 3.5vw; }
+        #ad-wrapper img { max-width: 100%; }
+
+        #ad-wrapper .header a {
+            font-size: 3vw;
+            color: #fff;
+            opacity: .5;
+        }
+
+        #ad-wrapper .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5vw 0 4vw;
+            color: #fff;
+            margin-bottom: 6vw;
+        }
+
+        #ad-wrapper .header .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        #ad-wrapper .header img {
+            height: 5vw;
+            width: auto;
+            padding-right: 2vw;
+        }
+        #ad-wrapper .header span {
+            padding-left: 2vw;
+            background-color: rgba(32, 32, 32, .3);
+            padding: 4px 6px;
+            text-align: center;
+            border-radius: 5px;
+            font-size: 3vw;
+        }
+        #ad-wrapper .btns-ctr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        #ad-wrapper .ad-btn {
+            display: inline-block;
+            color: #fff;
+            width: 29.5%;
+            padding: 3.5vw 0;
+            margin: 2vw 1.5vw;
+            border: 1px solid #fff;
+            border-radius: 999px;
+            ze: 3.25vw;
+            font-weight: 700;
+            line-height: 1;
+            text-align: center;
+            text-decoration: none;
+            font-style: italic;
+            transition: all .1s ease-in-out;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        #ad-wrapper .survey-btn.active {
+            color: #2a2d36;
+            background-color: #fff;
+        }
+
+        #ad-wrapper .scale-ctr {
+            color: #fff;
+            width: 100%;
+            border-radius: 9999px;
+            border: 1px solid #fff;
+            background-color: rgba(255,255,255, .2);
+            font-size: 0;
+            margin: 4vw 0;
+            overflow: hidden;
+        }
+
+        #ad-wrapper .scale-ctr .scale-btn {
+            display: inline-block;
+            padding: 4vw;
+            border-right: 1px solid #fff;
+            width: 20%;
+            font-size: 3.5vw;
+            text-align: center;
+            transition: all .1s ease-in-out;
+        }
+
+        #ad-wrapper .scale-ctr .scale-btn:last-of-type {
+            border-right: none;
+        }
+
+        #ad-wrapper .scale-description {
+            display: flex;
+            justify-content: space-between;
+            color: rgba(255,255,255, .2);
+        }
+
+        #ad-wrapper #survey-text-input {
+            width: 100%;
+            border-radius: 5px;
+            padding: 4vw 4vw 4vw 16vw;
+            font-size: 3.5vw;
+            font-size: 5vw;
+            color: #3e3e3e;
+            background-color: #fff;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+            -webkit-appearance: none;
+            height: 59.09px;
+        }
+
+        #ad-wrapper #survey-text-input::placeholder {
+            color: #a9a9a9;
+        }
+
+        #ad-wrapper #survey-text-input.complete {
+            background-color: rgba(255, 255, 255, .1);
+            color: #fff;
+        }
+
+        #ad-wrapper #input-wrapper {
+            position: relative;
+            margin-top: 5vw;
+        }
+
+        #ad-wrapper #input-wrapper .cal {
+            position: absolute;
+            left: 4vw;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        #ad-wrapper #input-wrapper .done {
+            position: absolute;
+            right: 2vw;
+            top: 50%;
+            transform: translateY(-50%);
+            height: calc(100% - 2vw);
+            opacity: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        #ad-wrapper #input-wrapper .done.active {
+            opacity: 1;
+        }
+
+        #ad-wrapper #input-wrapper #submit.complete {
+            transform: translateY(-50%) scale(.60);
+        }
+
+        #Rectangle_27 {
+             fill: #4696C1;
+        }
+
+        #Line_2,
+        #Line_3 {
+            stroke: #fff;
+        }
+
+        .complete #Rectangle_27 {
+             fill: #fff;
+        }
+
+        .complete #Line_2,
+        .complete #Line_3 {
+            stroke: #4696C1;
+        }
+
+        #ad-wrapper #text-submit {
+            color: #fff;
+            background-color: #2bc5b4;
+            border-radius: 9999px;
+            width: 100%;
+            text-align: center;
+            font-size: 3.5vw;
+            padding: 4vw;
+            margin-top: 4vw;
+        }
+
+        #ad-wrapper #thank-you,
+        #ad-wrapper #survey {
+            opacity: 0;
+            transition: opacity .5s ease-in-out;
+        }
+        #ad-wrapper #survey.is-visible,
+        #ad-wrapper #thank-you.is-visible {
+            opacity: 1;
+        }
+        #ad-wrapper #thank-you {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            margin-top: calc(-1em - 2vw);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="ad-wrapper">
+        <div class="header">
+            <div class="header-left">
+                <img src="./_i/js-logo.svg" alt="">
+                <span>Survey</span>
+            </div>
+            <div class="header-right">
+                <a href="#">Why am I seeing this?</a>
+            </div>
+
+        </div>
+        <div id="survey" class="is-visible">
+            <h3>When is your birthday?</h3>
+            <div id="input-wrapper">
+                <img class="cal" src="./_i/calendar.svg" alt="">
+                <input id="survey-text-input" type="date" name="" value="" min="1900-01-01" max="2020-01-01">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 53 53" id="submit" class="done">
+                        <g id="Done" transform="translate(-370 -140)">
+                            <rect id="Rectangle_27" data-name="Rectangle 27" width="53" height="53" rx="8" transform="translate(370 140)">
+                                <animate begin="Rectangle_27.click" attributeName="rx" dur="100ms" to="50%" fill="freeze"/>
+                            </rect>
+                            <g id="Check" transform="translate(-2)">
+                                <line id="Line_2" data-name="Line 2" x2="9" y2="9" transform="translate(385.5 169.5)" stroke-linecap="round" stroke-width="2"/>
+                                <line id="Line_3" data-name="Line 3" x1="17" y2="24" transform="translate(394.5 154.5)" stroke-linecap="round" stroke-width="2"/>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <div id="thank-you">
+            <div class="">
+                <h1>🙏</h1>
+                <h1>Thank You!</h1>
+                <h3>We appreciate your help!</h3>
+            </div>
+        </div>
+
+        <script>
+            var survey = document.querySelector('#survey');
+            var thankYou = document.querySelector('#thank-you');
+            var submitted = false;
+            var input = document.querySelector('#survey-text-input');
+            var userText = "";
+            var submit = document.querySelector('#submit');
+
+            input.addEventListener('change', function(){
+                userText = input.value;
+                if (userText.length) {
+                    submit.classList.add('active');
+                } else {
+                    submit.classList.remove('active');
+                }
+            })
+
+            submit.addEventListener('click', function(){
+                console.log(input.value);
+                submit.classList.add('complete');
+                input.classList.add('complete');
+            })
+
+            var transition = function(){
+                survey.classList.remove('is-visible');
+                window.setTimeout(function(){
+                    survey.setAttribute('style', 'display: none');
+                    thankYou.setAttribute('style', 'display: flex');
+                    window.setTimeout(function(){
+                        thankYou.classList.add('is-visible');
+                    }, 100)
+                }, 500)
+            }
+        </script>
+    </div>
+</body>
+</html>

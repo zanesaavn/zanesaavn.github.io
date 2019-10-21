@@ -1,0 +1,327 @@
+<html dir="ltr" lang="en">
+
+<head>
+    <title>JioSaavn Ad Template - Maximus Timed Modal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <style>
+    * {
+        border: none;
+        box-sizing: border-box;
+        margin: 0;
+        outline: none;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Lato', sans-serif;
+        background-color: #000;
+    }
+
+    #max-wrapper {
+        height: 100%;
+        opacity: 1;
+        overflow: scroll;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    #max-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    #max-container .pill {
+        border-radius: 9999px;
+        padding: 2vw 4vw;
+    }
+
+    #max-container .info {
+        background-color: rgba(255, 255, 255, .15);
+        color: #fff;
+        position: absolute;
+        top: 10vw;
+    }
+
+    #max-body {
+        position: relative;
+        width: 85%;
+        text-align: center;
+        background-color: #4098C1;
+        color: #fff;
+        padding: 0 4vw 10vw 4vw;
+        border-radius: 5px;
+        margin-top: 4vw;
+    }
+
+    #max-body h1 { margin-bottom: 2vw; color: #fff; font-size: 5vw; line-height: 1.1; text-align: center;  }
+    #max-body h3 { color: #fff; text-align: center;  }
+    #max-body p { margin-bottom: 6vw; color: #b1e1f7; font-size: 3.5vw; opacity: .5;}
+    #max-body img { max-width: 100%; }
+    #max-body .header a {
+        font-size: 3vw;
+        color: #fff;
+        opacity: .5;
+    }
+
+    #max-body .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 0 4vw;
+        color: #fff;
+    }
+
+    #max-body .header .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    #max-body .header img {
+        height: 5vw;
+        width: auto;
+        padding-right: 2vw;
+    }
+    #max-body .header span {
+        padding-left: 2vw;
+        background-color: rgba(32, 32, 32, .3);
+        padding: 4px 6px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 3vw;
+    }
+
+    #max-body .survey-info {
+        width: 100%;
+        padding-bottom: 4vw;
+    }
+
+    #max-body .survey-info h3 {
+        margin-bottom: 2vw;
+    }
+
+    #max-body .survey-info p {
+        max-width: 70%;
+        display: inline-block;
+    }
+
+    #max-close {
+        color: #2BC5B4;
+        text-decoration: none;
+        vertical-align: middle;
+        margin-top: 4vw;
+        font-size: 3vw;
+    }
+
+    #max-body #survey {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 60vh;
+        overflow: scroll;
+        padding-bottom: 10vw;
+    }
+
+
+    #max-body .survey-block {
+        font-style: italic;
+        background-color: rgba(0,0,0,0.2);
+        padding: 6vh 0;
+        border-radius: 5px;
+        display: inline-block;
+        width: 48%;
+        margin-bottom: 2vh;
+        position: relative;
+        transition: all .1s ease-in-out;
+    }
+
+    #max-body .survey-block .circle {
+        height: 2vh;
+        width: 2vh;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        position: absolute;
+        top: 1vh;
+        left: 1vh;
+        transition: all .1s ease-in-out;
+    }
+
+    #max-body .survey-block.active {
+        color: #2bc5b4;
+    }
+
+    #max-body .survey-block.active .circle {
+        background-color: #2bc5b4;
+    }
+
+    #max-body #survey .survey-header {
+        padding: 15vw 0 5vw;
+        text-align: center;
+        font-size: 20vw;
+        width: 100%;
+    }
+
+    #max-body #survey #picker-label {
+        display: inline-block;
+        text-align: center;
+        margin: auto;
+        color: #fff;
+        background-color: #7ECDF5;
+        padding: 3vw;
+        text-transform: capitalize;
+        width: 70%;
+    }
+
+    #max-body #survey #picker-label.active {
+        background-color: #fff;
+        color: #4397C1;
+    }
+
+    #date-input {
+        /* display: none; */
+        opacity: 0;
+        height: 0;
+        width: 100%;
+        display: block;
+    }
+
+    #max-body #submit {
+        display: inline-block;
+        text-align: center;
+        background-color: #fff;
+        color: #000;
+        position: absolute;
+        bottom: 5vw;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+
+    #max-close,
+    #max-body #submit,
+    #max-body #thank-you,
+    #max-body #survey {
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    #max-close.is-visible,
+    #max-body #submit.is-visible,
+    #max-body #survey.is-visible,
+    #max-body #thank-you.is-visible {
+        opacity: 1;
+    }
+    #max-body #thank-you {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin: 8vw 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="max-wrapper" class="%%PATTERN:view_mode%%">
+        <div id="max-container">
+            <div id="max-body">
+                <div class="header">
+                    <div class="header-left">
+                        <img src="./_i/js-logo.svg" alt="">
+                        <span>Survey</span>
+                    </div>
+                    <div class="header-right">
+                        <a href="#">Why am I seeing this?</a>
+                    </div>
+
+                </div>
+                <div id="survey" class="is-visible">
+                    <div class="survey-header">
+                        <img src="./_i/birthday.svg" alt="">
+                    </div>
+                    <div class="survey-info">
+                        <h3>When is your birthday?</h3>
+                        <p>You're so special, we should celebrate <i>every</i> day!</p>
+                    </div>
+                    <a id="picker-label" class="pill" for="date-input">Add my birthday</a>
+                </div>
+                <div id="thank-you">
+                    <div class="">
+                        <h1>🙏</h1>
+                        <h1>Thank You!</h1>
+                        <h3>We appreciate your help!</h3>
+                    </div>
+                </div>
+            </div>
+            <a id="max-close" class="is-visible" href="" onclick="dismiss(); return false;" class="%%PATTERN:view_mode%%">Not Now</a>
+            <input id="date-input" type="date" name="" value="">
+        </div>
+    </div>
+    <script>
+        var surveyBlocks = document.querySelectorAll('.survey-block');
+        var survey = document.querySelector('#survey');
+        // var submit = document.querySelector('#submit');
+        var dismiss = document.querySelector('#max-close');
+        var thankYou = document.querySelector('#thank-you');
+        var dateLabel = document.querySelector('#picker-label');
+        var datePicker = document.querySelector('#date-input');
+        var dateOptions = { year: 'numeric', month: 'short', day: 'numeric'};
+        var selectedDate;
+
+        datePicker.addEventListener('change', function(){
+            selectedDate = datePicker.value;
+            dateLabel.classList.add('active');
+            dateLabel.innerHTML = 'Save';
+        })
+
+        dateLabel.addEventListener('click', function(){
+            datePicker.focus();
+        });
+
+
+        // for (var i = 0; i < surveyBlocks.length; i++) {
+        //     surveyBlocks[i].addEventListener('click', function(){
+        //         if (this.classList.contains('active')) {
+        //             this.classList.remove('active');
+        //         } else {
+        //             this.classList.add('active');
+        //         }
+        //     });
+        // }
+
+        // submit.addEventListener('click', function(){
+        //     window.setTimeout(transition, 500);
+        // });
+
+        var transition = function(){
+            survey.classList.remove('is-visible');
+            // submit.classList.remove('is-visible');
+            dismiss.classList.remove('is-visible');
+            window.setTimeout(function(){
+                survey.setAttribute('style', 'display: none');
+                thankYou.setAttribute('style', 'display: flex');
+                window.setTimeout(function(){
+                    thankYou.classList.add('is-visible');
+                }, 100)
+            }, 500)
+        }
+
+        var formatDate = function(str){
+            var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"]
+            var strArray = str.split('-');
+            strArray[1] = months[strArray[1] - 1];
+            return strArray[1] + " - " + strArray[2] + " - " + strArray[0]
+        }
+
+        datePicker.valueAsDate = new Date();
+        selectedDate = datePicker.value;
+
+    </script>
+</body>
+
+</html>
