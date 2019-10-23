@@ -1,0 +1,63 @@
+LINK INFO:
+
+hey @Josiah @Zane Brzezinski
+Every CTA in the ad i.e. every answer should be tagged with a unique link.
+Sample link is as follows -
+saavn://trigger_event?referrer=ad_project=rich_user_data&screen_name=home&ad_variant=marital_status_01&ad_type=in_feed&sec_pos=row1&cat_id=campaign_01&sec_id=marital_status&sec_title=Are_you_married&entity_id=yes&entity_name=Oh,Yes!&entity_type=button&sec_type=single_choice
+Within this link, we will need to tweak the values of few params depending on the scenario.
+Except following params, you can leave rest of the values constant as it is in the above link for now.
+ad_variant will be the name of the ad file. For example if we have two different variants for age bracket then we can name them age_bracket_01 and so on
+ad_type will be showcase, maximus, etc as applicable
+sec_id and entity_id values will be depending on the question and answer. You can find values for the same from this link - https://docs.google.com/spreadsheets/d/1TVaUxT0JMCE__CYGQW5OK4pTTvDOyV3oM_hNYNiBjWc/edit?pli=1#gid=190427656
+sec_title and entity_name are basically question and answer in words respectively
+sec_type can be either single_choice or multiple_choice or “date_picker” or “free field”
+Please let me know if any clarification required on this. We can do a short call also or I can implement this for couple of ads and share the sample links if you want. (edited)
+
+
+
+
+
+
+
+
+
+/// LINK GUIDE
+
+saavn://trigger_event?referrer=
+ad_project=rich_user_data&                  ##              never touch
+screen_name=home&                           ##              never touch
+ad_variant=marital_status_01&               ## name of ad
+ad_type=in_feed&                            ## maximus or showcase
+sec_pos=row1&                               ##              never touch
+cat_id=campaign_01&                         ##              never touch
+sec_id=marital_status&                      ## unique question type
+sec_title=Are_you_married&                  ## question
+entity_id=yes&                              ## answer id                    same as entity_name for
+entity_name=Oh,Yes!&                        ## copy displayed to user
+entity_type=button&                         ##              never touch
+sec_type=single_choice&                     ## single / multiple / date / text
+cluster_id=demographics_01                  ## consult sheet
+
+
+
+
+//  Template version
+
+saavn://trigger_event?referrer=
+ad_project=rich_user_data&
+screen_name=home&
+ad_variant=marital_status_01&
+ad_type=in_feed&
+sec_pos=row1&
+cat_id=campaign_01&
+sec_id=marital_status&
+sec_title=Are_you_married&
+entity_id=yes&
+entity_name=Oh,Yes!&
+entity_type=button&
+sec_type=single_choice&
+cluster_id=demographics_01
+
+extra
+
+

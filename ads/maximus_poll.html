@@ -1,0 +1,356 @@
+<html dir="ltr" lang="en">
+
+<head>
+    <title>JioSaavn Ad Template - Maximus Timed Modal</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:700&display=swap" rel="stylesheet">
+    <style>
+    * {
+        border: none;
+        box-sizing: border-box;
+        margin: 0;
+        outline: none;
+        padding: 0;
+    }
+
+    html,
+    body {
+        height: 100%;
+        font-family: 'Lato', sans-serif;
+        background-color: #000;
+    }
+
+    #max-wrapper {
+        height: 100%;
+        opacity: 1;
+        overflow: scroll;
+        transition: opacity 300ms ease-in-out;
+    }
+
+    #max-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+
+    #max-container .pill {
+        border-radius: 9999px;
+        padding: 2vw 4vw;
+    }
+
+    #max-container .info {
+        background-color: rgba(255, 255, 255, .15);
+        color: #fff;
+        position: absolute;
+        top: 10vw;
+    }
+
+    #max-body {
+        position: relative;
+        width: 85%;
+        text-align: center;
+        background-color: #163A46;
+        color: #fff;
+        padding: 0 4vw 10vw 4vw;
+        border-radius: 5px;
+        margin-top: 4vw;
+        max-height: 74vh;
+    }
+
+    #max-body h1 {
+        margin-bottom: 2vw;
+        color: #fff;
+        font-size: 5vw;
+        line-height: 1.1;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 6vw;
+        font-style: italic;
+        width: 75%;
+    }
+
+    #max-body h3 { color: #fff; text-align: center;  }
+    #max-body p { margin-bottom: 6vw; color: #b1e1f7; font-size: 3.5vw; }
+    #max-body img { max-width: 100%; }
+    #max-body .header a {
+        font-size: 3vw;
+        color: #fff;
+        opacity: .5;
+    }
+
+    #max-body .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5vw 0 4vw;
+        color: #fff;
+    }
+
+    #max-body .header .header-left {
+        display: flex;
+        align-items: center;
+    }
+
+    #max-body .header svg {
+        height: 5vw;
+        width: auto;
+        padding-right: 2vw;
+    }
+    #max-body .header span {
+        padding-left: 2vw;
+        background-color: rgba(32, 32, 32, .3);
+        padding: 4px 6px;
+        text-align: center;
+        border-radius: 5px;
+        font-size: 3vw;
+    }
+
+    #max-body #survey-info {
+        width: 100%;
+        padding-bottom: 4vw;
+    }
+
+    #max-close {
+        color: #2BC5B4;
+        text-decoration: none;
+        vertical-align: middle;
+        margin-top: 4vw;
+        font-size: 3vw;
+    }
+
+    #max-body #survey {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-height: 60vh;
+        overflow: scroll;
+    }
+
+    #max-body #survey textarea {
+        height: 33vw;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 4vw;
+        padding: 2.5vw 3vw;
+    }
+
+    #max-body #survey img {
+        height: 40vw;
+        text-align: center;
+        margin: 0 auto 4vw;
+    }
+
+    #max-body #survey #options {
+        transition: all .1s ease-in-out;
+        width: 100%;
+    }
+
+    #max-body #survey .option {
+        background:rgba(32, 32, 32, .3);
+        color: #fff;
+        width: 100%;
+        padding: 3vw;
+        margin-bottom: 2vw;
+        border-radius: 5px;
+        width: 100%;
+        transition: all .1s ease-in-out;
+    }
+
+    #max-body #survey .option.active {
+        background-color: #fff;
+        color: #153946;
+    }
+
+    #max-body #survey #text-option {
+        width: 100%;
+        height: 30vh;
+        display: none;
+        opacity: 0;
+        transition: all .1s ease-in-out;
+    }
+
+    #max-container #submit {
+        display: block;
+        text-align: center;
+        background-color: #2bc5b4;
+        color: #fff;
+        margin-top: 10vw;
+        opacity: .1;
+        padding: 4vw 20vw;
+        transition: opacity .1s ease-in-out;
+    }
+
+    #max-container #submit.active {
+        opacity: 1;
+    }
+
+    #max-body #survey #options,
+    #max-body #survey #text-option,
+    #max-close,
+    #max-body #submit,
+    #max-body #thank-you,
+    #max-body #survey {
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+    }
+
+    #max-body #survey #options.is-visible,
+    #max-body #survey #text-option.is-visible,
+    #max-close.is-visible,
+    #max-body #submit.is-visible,
+    #max-body #survey.is-visible,
+    #max-body #thank-you.is-visible {
+        opacity: 1;
+    }
+    #max-body #thank-you {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin: 8vw 0;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="max-wrapper" class="%%PATTERN:view_mode%%">
+        <div id="max-container">
+            <div id="max-body">
+                <div class="header">
+                    <div class="header-left">
+                        <?xml version="1.0" encoding="UTF-8"?>
+                        <svg width="38px" height="20px" viewBox="0 0 38 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+                            <title>Group 4</title>
+                            <desc>Created with Sketch.</desc>
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g id="small" transform="translate(-115.000000, -153.000000)">
+                                    <g id="Group-4" transform="translate(115.000000, 153.000000)">
+                                        <path d="M37.6387492,2.80243859 C37.220916,1.65483699 36.3170115,0.750854663 35.1694099,0.333099359 C34.1182912,0.000778087733 33.1419467,0.000778087733 31.1891021,0.000778087733 L25.3006898,0.000778087733 C23.3478452,0.000778087733 22.3715007,0.000778087733 21.320382,0.333099359 C20.1727804,0.750854663 19.2688759,1.65483699 18.8511206,2.80243859 C18.7875508,3.00365208 18.7361192,3.20214226 18.6945693,3.40522316 C19.1201833,4.00785211 19.4860401,4.65545453 19.784748,5.33916022 C19.8136929,4.59499711 19.883643,3.99913752 20.0538108,3.46077862 C20.4180336,2.46007999 20.9781012,1.90001244 21.978722,1.53578957 C22.8953094,1.2460297 23.9748283,1.2460297 25.6775955,1.2460297 L30.8121964,1.2460297 C32.5149636,1.2460297 33.5944825,1.2460297 34.5110699,1.53578957 C35.5116907,1.90001244 36.0717583,2.46007999 36.4359811,3.46077862 C36.725741,4.37728816 36.725741,5.45680708 36.725741,7.15965209 L36.725741,12.2941752 C36.725741,13.9970202 36.725741,15.0765392 36.4359811,15.9930487 C36.0717583,16.9936695 35.5116907,17.5537371 34.5110699,17.9179599 C33.5944825,18.2077976 32.5149636,18.2077976 30.8121964,18.2077976 L25.6775955,18.2077976 C23.9748283,18.2077976 22.8953094,18.2077976 21.978722,17.9179599 C20.9781012,17.5537371 20.4180336,16.9936695 20.0538108,15.9930487 C19.8834874,15.4543786 19.8136151,14.8581299 19.7846702,14.1132665 C19.4859623,14.7971279 19.1200277,15.4448081 18.6943359,16.047437 C18.7359636,16.2509848 18.7873952,16.449864 18.8511206,16.6513887 C19.2688759,17.7989903 20.1727804,18.7029727 21.320382,19.1206501 C22.3715007,19.4529714 23.3478452,19.4529714 25.3006898,19.4529714 L31.1891021,19.4529714 C33.1419467,19.4529714 34.1182912,19.4529714 35.1694099,19.1206501 C36.3170115,18.7029727 37.220916,17.7989903 37.6387492,16.6513887 C37.9709926,15.6003478 37.9709926,14.6239255 37.9709926,12.6711587 L37.9709926,6.78266858 C37.9709926,4.82982399 37.9709926,3.8534795 37.6387492,2.80243859" id="Fill-8" fill="#FFFFFF"></path>
+                                        <path d="M23.6807889,16.8856709 C22.1253137,16.8856709 21.0860998,15.923332 21.0860998,14.2456193 C21.0860998,14.2456193 21.0860998,14.5724161 21.0860998,14.0717945 C21.0860998,14.001611 21.1414996,13.7380726 21.4042598,13.7890374 C22.9796541,14.2740973 24.6665483,14.7629698 25.8994283,16.394931 C26.040729,16.5944327 25.9173243,16.884815 25.6730048,16.8856709 C24.6554216,16.8856709 23.6807889,16.8856709 23.6807889,16.8856709 Z M26.7453653,16.5507042 C26.4337411,14.2369047 25.339672,10.2639109 21.2210202,7.32600724 C21.1560499,7.27652086 21.0877337,7.22283281 21.0860998,7.05227598 C21.0860998,6.3775183 21.0860998,5.16370143 21.0860998,5.16370143 C21.0860998,3.08675185 22.4880582,2.57134653 23.1377615,2.57134653 C23.2662238,2.57508135 23.3775681,2.60464869 23.4549101,2.73497838 C25.4184145,7.01726203 26.6428133,9.72687475 27.3997371,16.1832911 C27.4037053,16.3091857 27.4233131,16.3694875 27.4993323,16.1790895 C28.0332561,15.0065891 30.5609519,9.02410591 29.5562072,2.898299 C29.5289741,2.68471392 29.6981304,2.56807856 29.8291604,2.56807856 C30.866507,2.56807856 32.8349911,2.56807856 32.8349911,2.56807856 C34.3560748,2.56807856 35.4036921,3.61289477 35.4036921,5.16370143 C35.4036921,5.16370143 35.4036921,7.06814897 35.4036921,7.81985953 C35.4036921,7.8852189 35.3859517,8.00504441 35.2427836,8.08191948 C30.5861619,10.5087751 28.8371763,14.4737546 28.2164179,16.5827614 C28.1551046,16.7544854 28.1194682,16.8856709 27.9276696,16.8856709 C27.677281,16.8856709 27.2657504,16.8856709 27.0098373,16.8856709 C26.8258195,16.8832589 26.786993,16.8108967 26.7453653,16.5507042 Z M32.8349911,16.8856709 C32.8349911,16.8856709 30.9279759,16.8856709 29.5930886,16.8856709 C29.4557561,16.8856709 29.1397747,16.6687401 29.3881403,16.3673089 C31.0506803,14.5811307 33.1254513,13.9601389 35.0995377,13.2998536 C35.358174,13.2233676 35.4036921,13.4949202 35.4036921,13.5702391 C35.4036921,14.2001011 35.4036921,14.2456193 35.4036921,14.2456193 C35.4036921,15.7658471 34.3582535,16.8856709 32.8349911,16.8856709 L32.8349911,16.8856709 Z" id="Fill-9" fill="#FFFFFF"></path>
+                                        <g id="Group">
+                                            <rect id="Rectangle" fill="#FFFFFF" x="1.98451276" y="4.66899325" width="15.7173722" height="9.10362648"></rect>
+                                            <path d="M14.0654141,8.91610734 C13.3946247,8.91610734 12.850897,9.49150321 12.850897,10.1999521 C12.850897,10.9091791 13.3946247,11.4837969 14.0654141,11.4837969 C14.7369817,11.4837969 15.2806316,10.9091791 15.2806316,10.1999521 C15.2806316,9.49150321 14.7369817,8.91610734 14.0654141,8.91610734" id="Fill-10" fill="#2BC4B4"></path>
+                                            <path d="M14.0654141,13.2202553 C12.3550217,13.2202553 10.9674578,11.8684056 10.9674578,10.1999521 C10.9674578,8.5318098 12.3550217,7.17988237 14.0654141,7.17988237 C15.7764291,7.17988237 17.1628258,8.5318098 17.1628258,10.1999521 C17.1628258,11.8684056 15.7764291,13.2202553 14.0654141,13.2202553 Z M10.3728432,5.80142214 C10.3728432,6.30531176 9.95913394,6.71878758 9.45532214,6.71878758 L9.0178034,6.71878758 C8.51274666,6.71878758 8.09942645,6.30585642 8.09942645,5.80142214 L8.09942645,5.57530984 C8.09942645,5.07079776 8.51259104,4.65763317 9.0178034,4.65763317 L9.45532214,4.65763317 C9.95991203,4.65763317 10.3728432,5.0711868 10.3728432,5.57530984 L10.3728432,5.80142214 Z M10.3728432,12.1636899 C10.3728432,12.67715 9.95205334,13.0980177 9.43874887,13.0980177 L9.0337542,13.0980177 C8.51998287,13.0980177 8.09942645,12.67715 8.09942645,12.1636899 L8.09942645,8.2515426 C8.09942645,7.73878279 8.51998287,7.31845979 9.0337542,7.31845979 L9.43874887,7.31845979 C9.95205334,7.31845979 10.3728432,7.73878279 10.3728432,8.2515426 L10.3728432,12.1636899 Z M7.42038929,10.2779165 C7.42038929,15.2442171 -0.49540846,13.054756 2.71397001,10.5060518 C3.46498029,11.5479891 4.90646563,11.4786615 5.06013796,10.4503407 L5.08861597,6.39992722 C5.16292335,5.3638256 7.17801496,5.15887729 7.42038929,6.39992722 L7.42038929,10.2779165 Z M9.72648571,0 C4.35480143,0 1.42108547e-14,4.35464581 1.42108547e-14,9.72625228 C1.42108547e-14,15.0978588 4.35480143,19.4525046 9.72648571,19.4525046 C15.0980922,19.4525046 19.4528936,15.0978588 19.4528936,9.72625228 C19.4528936,4.35464581 15.0980922,0 9.72648571,0 L9.72648571,0 Z" id="Fill-11" fill="#2BC4B4"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                        <span>Survey</span>
+                    </div>
+                    <div class="header-right">
+                        
+                    </div>
+
+                </div>
+                <div id="survey" class="is-visible">
+                    <img src="_i/radio.svg" alt="">
+                    <h1>How do you discover new music?</h1>
+                    <div id="options" class="is-visible">
+                        <div class="option" data-option="option">
+                            No Schooling
+                        </div>
+                        <div class="option" data-option="option">
+                            Schooling Done
+                        </div>
+                        <div class="option" data-option="option">
+                            Bachelor's Degree
+                        </div>
+                        <div class="option" data-option="option">
+                            Master's Degree or Higher
+                        </div>
+                        <div id="other" class="option">
+                            Other
+                        </div>
+                    </div>
+                    <div id="text-option">
+                        <textarea id="other-input" name="other" placeholder="Please Specify..."></textarea>
+                    </div>
+                </div>
+                <div id="thank-you">
+                    <div class="">
+                        <h1>🙏</h1>
+                        <h1>Thank You!</h1>
+                        <h3>We appreciate your help!</h3>
+                    </div>
+                </div>
+            </div>
+            <a id="submit" class="pill is-visible">
+                Done
+            </a>
+            <a id="max-close" class="is-visible" href="" onclick="dismiss(); return false;" class="%%PATTERN:view_mode%%">Not Now</a>
+        </div>
+    </div>
+    <script>
+        var surveyBlocks = document.querySelectorAll('.option');
+        var survey = document.querySelector('#survey');
+        var dismiss = document.querySelector('#max-close');
+        var thankYou = document.querySelector('#thank-you');
+        var submit = document.querySelector('#submit');
+        var options = document.querySelector('#options');
+        var textView = document.querySelector('#text-option');
+        var textInput = document.querySelector('#other-input')
+        var userInput = "";
+
+
+        for (var i = 0; i < surveyBlocks.length; i++) {
+            surveyBlocks[i].addEventListener('click', function(){
+
+                for (var i = 0; i < surveyBlocks.length; i++) {
+                    surveyBlocks[i].classList.remove('active');
+                }
+
+                this.classList.add('active');
+                userInput = this.getAttribute('data-option');
+                submit.classList.add('active');
+
+                if (this.id === 'other') {
+                    transitionOther();
+                }
+
+            });
+        }
+
+        textInput.addEventListener('keyup', function(){
+            userInput = textInput.value;
+            if (userInput.length) {
+                submit.classList.add('active');
+            } else {
+                submit.classList.remove('active');
+            }
+        })
+
+
+        var transition = function(){
+            survey.classList.remove('is-visible');
+            dismiss.classList.remove('is-visible');
+            window.setTimeout(function(){
+                survey.setAttribute('style', 'display: none');
+                thankYou.setAttribute('style', 'display: flex');
+                window.setTimeout(function(){
+                    thankYou.classList.add('is-visible');
+                }, 100)
+            }, 500)
+        }
+
+        var transitionOther = function(){
+            userInput = "";
+            submit.classList.remove('active');
+            options.classList.remove('is-visible');
+            window.setTimeout(function(){
+                options.setAttribute('style', 'display: none');
+                textView.setAttribute('style', 'display: block');
+                window.setTimeout(function(){
+                    textView.classList.add('is-visible');
+                }, 100)
+            }, 500)
+        }
+
+    </script>
+</body>
+
+</html>
