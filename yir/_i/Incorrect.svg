@@ -1,0 +1,11 @@
+<svg id="Incorrect" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff5454;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="12" cy="12" r="12"/>
+  <image id="Vector_Smart_Object" data-name="Vector Smart Object" x="6" y="6" width="12" height="12" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAhklEQVQokX2Suw2AMAxErdDy2SGrsURqdqFgFJZgCvqHjo+EjIOr+PwucZwY0AEjkKwSqt1Mp2TiihlovEXaXVNMElpgjUwOFtM+hcGbAnjwR3tTHa6YQthPZjez7ZVrLS3c3fccDqIGq7XPIB5YjxJeMDAlieVvGs5UJGRgAfqfr9GfDOQDr089pLSfz+8AAAAASUVORK5CYII="/>
+</svg>

@@ -1,0 +1,11 @@
+<svg id="Correct" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #02bb3f;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="12" cy="12" r="12"/>
+  <image id="Vector_Smart_Object_copy" data-name="Vector Smart Object copy" x="5" y="7" width="14" height="11" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAALCAYAAABPhbxiAAAAmklEQVQokZXQqwoCURAG4E0KBsVgM5oEi8WsVTDom/hmmsVuEIPRbjFZDIJ8suxZOOzFyx9n5juXSf4J+jhi/DNDDxdZTqWBqgR0DuiKQcVY6aZuhG4Yxc1hSWT1Dg51aI0XlgXUjtAdk+Kpm9B8YhFqLexrURhqYBvhVYQemH5aQDMazpOi2S/bi5+X3jz/igp4l/+1NkmSvAFK+uXXtAq6xAAAAABJRU5ErkJggg=="/>
+</svg>

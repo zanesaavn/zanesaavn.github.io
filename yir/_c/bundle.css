@@ -1,0 +1,2518 @@
+@charset "UTF-8";
+/* ==========================================================================
+   INUITCSS
+   ========================================================================== */
+/**
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/* Settings
+   ========================================================================== */
+/*----------  GLOBAL OVERRIDES  ----------*/
+/* Colors class list
+   ========================================================================== */
+/* Backgrounds class list
+   ========================================================================== */
+/* Tools
+   ========================================================================== */
+/* ==========================================================================
+   #BRANDING
+   ========================================================================== */
+/* Color Mapping
+   ========================================================================== */
+/* Color Helpers
+   ========================================================================== */
+/* Background Helpers
+   ========================================================================== */
+/* Generic
+   ========================================================================== */
+/* ==========================================================================
+   #BOX-SIZING
+   ========================================================================== */
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/**
+ * A very simple reset that sits on top of Normalize.css.
+ */
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Remove trailing margins from nested lists.
+ */
+li > ol,
+li > ul {
+  margin-bottom: 0; }
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * 1. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+fieldset {
+  min-width: 0;
+  /* [1] */
+  border: 0; }
+
+/* ==========================================================================
+   #SHARED
+   ========================================================================== */
+/**
+ * Shared declarations for certain elements.
+ */
+/**
+ * Always declare margins in the same direction:
+ * csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table,
+fieldset {
+  margin-bottom: 24px; }
+
+/**
+ * Consistent indentation for lists.
+ */
+dd, ol, ul {
+  margin-left: 24px; }
+
+/* Elements
+   ========================================================================== */
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+/**
+ * Simple page-level setup.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ */
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */ }
+
+@media screen and (max-width: 640px) {
+  body {
+    position: relative;
+    float: left; } }
+
+a {
+  color: #2bc5b4;
+  text-decoration: none; }
+  a:hover {
+    color: #75e1d5; }
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+/**
+ * Simple default styles for headings 1 through 6. Anything more opinionated
+ * than simple font-size changes should likely be applied via classes (see:
+ * http://csswizardry.com/2016/02/managing-typography-on-large-apps/).
+ */
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.16667; }
+
+h2 {
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.28571; }
+
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.25; }
+
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5; }
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333; }
+
+h6 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle;
+  /* [3] */ }
+
+/**
+   * If a `width` and/or `height` attribute has been explicitly defined, let’s
+   * not make the image fluid.
+   */
+img[width],
+img[height] {
+  max-width: none; }
+
+/* Objects
+   ========================================================================== */
+/* ==========================================================================
+   #ICON
+   ========================================================================== */
+@font-face {
+  font-family: "jiosaavn-site";
+  src: url("/_f/jiosaavn-site.eot");
+  src: url("/_f/jiosaavn-site.eot?#iefix") format("embedded-opentype"), url("/_f/jiosaavn-site.woff") format("woff"), url("/_f/jiosaavn-site.ttf") format("truetype"), url("/_f/jiosaavn-site.svg#jiosaavn-site") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "mono-bt";
+  src: url("/_f/jiosaavn-site.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+/* General
+   ========================================================================== */
+[data-o-icon]:before {
+  font-family: "jiosaavn-site" !important;
+  content: attr(data-o-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+[class^="o-icon-"]:before,
+[class*=" o-icon-"]:before {
+  font-family: "jiosaavn-site" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* Variations
+   ========================================================================== */
+.o-icon-chevron-down::before {
+  content: "\61"; }
+
+.o-icon-chevron-left::before {
+  content: "\62"; }
+
+.o-icon-chevron-right::before {
+  content: "\63"; }
+
+.o-icon-chevron-up::before {
+  content: "\64"; }
+
+.o-icon-close::before {
+  content: "\65"; }
+
+.o-icon-close-circle::before {
+  content: "\66"; }
+
+.o-icon-ellipsis::before {
+  content: "\67"; }
+
+.o-icon-follow-fill::before {
+  content: "\69"; }
+
+.o-icon-pause::before {
+  content: "\6a"; }
+
+.o-icon-home::before {
+  content: "\6b"; }
+
+.o-icon-next::before {
+  content: "\6c"; }
+
+.o-icon-menu::before {
+  content: "\6d"; }
+
+.o-icon-inbox::before {
+  content: "\6e"; }
+
+.o-icon-previous::before {
+  content: "\6f"; }
+
+.o-icon-play::before {
+  content: "\70"; }
+
+.o-icon-play-circle::before {
+  content: "\71"; }
+
+.o-icon-playlist::before {
+  content: "\72"; }
+
+.o-icon-playlist-fill::before {
+  content: "\73"; }
+
+.o-icon-radio::before {
+  content: "\74"; }
+
+.o-icon-radio-fill::before {
+  content: "\75"; }
+
+.o-icon-share-fill::before {
+  content: "\76"; }
+
+.o-icon-share::before {
+  content: "\77"; }
+
+.o-icon-shuffle::before {
+  content: "\78"; }
+
+.o-icon-settings::before {
+  content: "\79"; }
+
+.o-icon-search::before {
+  content: "\7a"; }
+
+.o-icon-repeat::before {
+  content: "\41"; }
+
+.o-icon-volume::before {
+  content: "\44"; }
+
+.o-icon-contract::before {
+  content: "\42"; }
+
+.o-icon-follow::before {
+  content: "\43"; }
+
+.o-icon-expand::before {
+  content: "\68"; }
+
+.o-icon-dislike::before {
+  content: "\45"; }
+
+.o-icon-like::before {
+  content: "\46"; }
+
+.o-icon-queue::before {
+  content: "\47"; }
+
+.o-icon-queue-end::before {
+  content: "\48"; }
+
+.o-icon-history::before {
+  content: "\49"; }
+
+.o-icon-artist::before {
+  content: "\4a"; }
+
+.o-icon-album::before {
+  content: "\4b"; }
+
+.o-icon-show::before {
+  content: "\4c"; }
+
+.o-icon-song::before {
+  content: "\4d"; }
+
+.o-icon-add::before {
+  content: "\4e"; }
+
+.o-icon-add-circle::before {
+  content: "\4f"; }
+
+.o-icon-add-fill::before {
+  content: "\50"; }
+
+/* ==========================================================================
+   #LAYOUT
+   ========================================================================== */
+/**
+ * Grid-like layout system.
+ *
+ * The layout object provides us with a column-style layout system. This file
+ * contains the basic structural elements, but classes should be complemented
+ * with width utilities, for example:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  u-1/2">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a two-column structure in which each column will
+ * fluidly fill half of the width of the parent. We can have more complex
+ * systems:
+ *
+ *   <div class="o-layout">
+ *     <div class="o-layout__item  u-1/1  u-1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2  u-1/3@medium">
+ *     </div>
+ *     <div class="o-layout__item  u-1/2  u-1/3@medium">
+ *     </div>
+ *   </div>
+ *
+ * The above will create a system in which the first item will be 100% width
+ * until we enter our medium breakpoint, when it will become 33.333% width. The
+ * second and third items will be 50% of their parent, until they also become
+ * 33.333% width at the medium breakpoint.
+ *
+ * We can also manipulate entire layout systems by adding a series of modifiers
+ * to the `.o-layout` block. For example:
+ *
+ *   <div class="o-layout  o-layout--reverse">
+ *
+ * This will reverse the displayed order of the system so that it runs in the
+ * opposite order to our source, effectively flipping the system over.
+ *
+ *   <div class="o-layout  o-layout--[right|center]">
+ *
+ * This will cause the system to fill up from either the centre or the right
+ * hand side. Default behaviour is to fill up the layout system from the left.
+ *
+ * There are plenty more options available to us: explore them below.
+ */
+/* Default/mandatory classes
+   ========================================================================== */
+/**
+ * 1. Allows us to use the layout object on any type of element.
+ * 2. We need to defensively reset any box-model properties.
+ * 3. Use the negative margin trick for multi-row grids:
+ *    http://csswizardry.com/2011/08/building-better-grid-systems/
+ */
+.o-layout {
+  display: block;
+  /* [1] */
+  margin: 0;
+  /* [2] */
+  padding: 0;
+  /* [2] */
+  list-style: none;
+  /* [1] */
+  margin-left: -24px;
+  /* [3] */
+  font-size: 0; }
+
+/**
+   * 1. Required in order to combine fluid widths with fixed gutters.
+   * 2. Allows us to manipulate grids vertically, with text-level properties,
+   *    etc.
+   * 3. Default item alignment is with the tops of each other, like most
+   *    traditional grid/layout systems.
+   * 4. By default, all layout items are full-width (mobile first).
+   * 5. Gutters provided by left padding:
+   *    http://csswizardry.com/2011/08/building-better-grid-systems/
+   * 6. Fallback for old IEs not supporting `rem` values.
+   */
+.o-layout__item {
+  box-sizing: border-box;
+  /* [1] */
+  display: inline-block;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%;
+  /* [4] */
+  padding-left: 24px;
+  /* [5] */
+  font-size: 16px;
+  /* [6] */
+  font-size: 1rem; }
+
+/* Gutter size modifiers
+   ========================================================================== */
+.o-layout--flush {
+  margin-left: 0; }
+  .o-layout--flush > .o-layout__item {
+    padding-left: 0; }
+
+.o-layout--tiny {
+  margin-left: -6px; }
+  .o-layout--tiny > .o-layout__item {
+    padding-left: 6px; }
+
+.o-layout--small {
+  margin-left: -12px; }
+  .o-layout--small > .o-layout__item {
+    padding-left: 12px; }
+
+.o-layout--large {
+  margin-left: -48px; }
+  .o-layout--large > .o-layout__item {
+    padding-left: 48px; }
+
+.o-layout--huge {
+  margin-left: -96px; }
+  .o-layout--huge > .o-layout__item {
+    padding-left: 96px; }
+
+/* Vertical alignment modifiers
+   ========================================================================== */
+/**
+ * Align all grid items to the middles of each other.
+ */
+.o-layout--middle > .o-layout__item {
+  vertical-align: middle; }
+
+/**
+ * Align all grid items to the bottoms of each other.
+ */
+.o-layout--bottom > .o-layout__item {
+  vertical-align: bottom; }
+
+/**
+ * Stretch all grid items of each row to have an equal-height.
+ * Please be aware that this modifier class doesn’t take any effect in IE9 and
+ * below and other older browsers due to the lack of `display: flex` support.
+ */
+.o-layout--stretch {
+  display: flex;
+  flex-wrap: wrap; }
+  .o-layout--stretch > .o-layout__item {
+    display: flex; }
+  .o-layout--stretch.o-layout--center {
+    justify-content: center; }
+  .o-layout--stretch.o-layout--right {
+    justify-content: flex-end; }
+  .o-layout--stretch.o-layout--left {
+    justify-content: flex-start; }
+
+/* Fill order modifiers
+   ========================================================================== */
+/**
+ * Fill up the layout system from the centre.
+ */
+.o-layout--center {
+  text-align: center; }
+  .o-layout--center > .o-layout__item {
+    text-align: left; }
+
+/**
+ * Fill up the layout system from the right-hand side.
+ */
+.o-layout--right {
+  text-align: right; }
+  .o-layout--right > .o-layout__item {
+    text-align: left; }
+
+/**
+ * Fill up the layout system from the left-hand side. This will likely only be
+ * needed when using in conjunction with `.o-layout--reverse`.
+ */
+.o-layout--left {
+  text-align: left; }
+  .o-layout--left > .o-layout__item {
+    text-align: left; }
+
+/**
+ * Reverse the rendered order of the grid system.
+ */
+.o-layout--reverse {
+  direction: rtl; }
+  .o-layout--reverse > .o-layout__item {
+    direction: ltr; }
+
+/* Auto-widths modifier
+   ========================================================================== */
+/**
+ * Cause layout items to take up a non-explicit amount of width.
+ */
+.o-layout--auto > .o-layout__item {
+  width: auto; }
+
+/* ==========================================================================
+   #WRAPPER
+   ========================================================================== */
+/**
+ * Page-level constraining and wrapping elements.
+ */
+.o-wrapper {
+  padding-right: 24px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px; }
+  .o-wrapper:after {
+    content: "" !important;
+    display: block !important;
+    clear: both !important; }
+
+/* Components
+   ========================================================================== */
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/**
+ * This is an example component. Extend inuitcss by building your own components
+ * that make up your UI. Component classes are prefixed with a `c-`.
+ */
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ */
+.c-btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  padding: 12px 24px;
+  transition: all 300ms ease-in-out;
+  border-radius: 3px; }
+
+/* Style variants
+   ========================================================================== */
+.c-btn--primary {
+  background-color: #2bc5b4; }
+  .c-btn--primary, .c-btn--primary:hover, .c-btn--primary:active, .c-btn--primary:focus {
+    text-decoration: none;
+    /* [4] */
+    color: #ffffff; }
+  .c-btn--primary:hover, .c-btn--primary:focus {
+    background-color: #258f83; }
+
+.c-btn--secondary {
+  background-color: #2a2d36; }
+  .c-btn--secondary, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--secondary:focus {
+    text-decoration: none;
+    color: #ffffff; }
+  .c-btn--secondary:hover, .c-btn--secondary:focus {
+    background-color: #828da8; }
+
+.c-btn--tertiary {
+  background-color: #ffffff;
+  color: #2bc5b4; }
+  .c-btn--tertiary, .c-btn--tertiary:hover, .c-btn--tertiary:active, .c-btn--tertiary:focus {
+    text-decoration: none;
+    color: #2bc5b4; }
+  .c-btn--tertiary:hover, .c-btn--tertiary:focus {
+    background-color: #e9e9e9;
+    color: #258f83; }
+
+/* Size variants
+   ========================================================================== */
+.c-btn--small {
+  padding: 6px 12px; }
+
+.c-btn--large {
+  padding: 24px 48px; }
+
+/* Ghost buttons
+   ========================================================================== */
+/**
+ * Ghost buttons have see-through backgrounds and are bordered.
+ */
+.c-btn--ghost {
+  border: 2px solid currentColor;
+  padding: 10px 22px; }
+  .c-btn--ghost, .c-btn--ghost:hover, .c-btn--ghost:active, .c-btn--ghost:focus {
+    background: none; }
+  .c-btn--ghost.c-btn--small {
+    padding: 4px 10px; }
+  .c-btn--ghost.c-btn--large {
+    padding: 22px 46px; }
+  .c-btn--ghost.c-btn--primary {
+    color: #2bc5b4; }
+    .c-btn--ghost.c-btn--primary:hover, .c-btn--ghost.c-btn--primary:focus {
+      color: #258f83; }
+  .c-btn--ghost.c-btn--secondary {
+    color: #2a2d36; }
+    .c-btn--ghost.c-btn--secondary:hover, .c-btn--ghost.c-btn--secondary:focus {
+      color: #828da8; }
+  .c-btn--ghost.c-btn--tertiary {
+    color: #ffffff; }
+    .c-btn--ghost.c-btn--tertiary:hover, .c-btn--ghost.c-btn--tertiary:focus {
+      color: #ffffff; }
+
+/* ==========================================================================
+   #FOOTERS
+   ========================================================================== */
+.c-footer {
+  padding: 48px 0;
+  margin: 48px 0 0;
+  border-top: 1px solid #e9e9e9; }
+
+/* Responsive
+   ========================================================================== */
+/* ==========================================================================
+   #HEADERS
+   ========================================================================== */
+.c-header {
+  padding: 24px 0;
+  margin: 0 0 48px;
+  border-bottom: 1px solid #e9e9e9; }
+
+/* Responsive
+   ========================================================================== */
+/* ==========================================================================
+   #LOGOS
+   ========================================================================== */
+.c-logo {
+  display: inline-block;
+  width: 67px;
+  height: 35px;
+  overflow: hidden; }
+  .c-logo > svg {
+    fill: #2a2d36; }
+
+/* Responsive
+   ========================================================================== */
+#fullscreen {
+  border: 20px solid #f6f6f6;
+  color: #fff; }
+  @media screen and (max-width: 640px) {
+    #fullscreen {
+      width: calc(100vw);
+      border: 10px solid #f6f6f6;
+      overflow-y: hidden;
+      max-height: 100vh; } }
+
+.fp-slidesNav.fp-bottom {
+  bottom: 75px;
+  overflow: visible !important; }
+  @media screen and (max-width: 640px) {
+    .fp-slidesNav.fp-bottom {
+      bottom: 50px; } }
+
+.fp-slidesNav {
+  white-space: nowrap;
+  width: 100vw;
+  overflow: hidden;
+  opacity: 1;
+  transition: opacity .8s ease-in-out; }
+  @media screen and (max-width: 640px) {
+    .fp-slidesNav {
+      display: none; } }
+  .fp-slidesNav ul li {
+    border: 2px solid transparent;
+    transition: all .3s ease-in-out;
+    border-radius: 50%;
+    padding: 6px;
+    position: relative; }
+    .fp-slidesNav ul li.active {
+      margin: 7px 20vw;
+      border-color: #fff; }
+      .fp-slidesNav ul li.active .tooltip {
+        opacity: 1; }
+      .fp-slidesNav ul li.active:first-of-type:after {
+        width: 0vw; }
+      .fp-slidesNav ul li.active:last-of-type:before {
+        width: 0; }
+      .fp-slidesNav ul li.active:before {
+        content: '';
+        width: 100vw;
+        position: absolute;
+        left: 12px;
+        height: 1px;
+        background-color: #fff; }
+      .fp-slidesNav ul li.active:after {
+        content: '';
+        width: 100vw;
+        position: absolute;
+        right: 12px;
+        height: 1px;
+        background-color: #fff; }
+    .fp-slidesNav ul li a span {
+      height: 6px !important;
+      width: 6px !important;
+      margin: -3px 0 0 -3px !important;
+      background-color: #fff; }
+    .fp-slidesNav ul li .tooltip {
+      position: absolute;
+      left: -6px;
+      bottom: -30px;
+      opacity: 0;
+      transition: all .3s ease-in-out; }
+
+.fp-section {
+  text-align: center; }
+
+.fp-slide {
+  position: relative; }
+  @media screen and (max-width: 640px) {
+    .fp-slide {
+      display: block !important;
+      text-align: center;
+      overflow-y: scroll; }
+      .fp-slide .fp-tableCell {
+        display: block; } }
+
+.hide-nav .fp-slidesNav {
+  opacity: 0; }
+
+.fp-tableCell {
+  height: 100vh;
+  padding-top: 15vh;
+  vertical-align: top; }
+  @media screen and (max-width: 640px) {
+    .fp-tableCell {
+      padding-top: 15vh; } }
+
+.stats-ctr {
+  position: absolute;
+  top: 25vh;
+  left: 40px;
+  text-align: left;
+  z-index: 1000;
+  color: #fff;
+  opacity: 1;
+  transition: opacity .8s ease-in-out;
+  width: 175px; }
+  @media screen and (max-width: 640px) {
+    .stats-ctr {
+      display: none; } }
+  .stats-ctr.mobile-stats {
+    display: none; }
+    @media screen and (max-width: 640px) {
+      .stats-ctr.mobile-stats {
+        display: block;
+        opacity: 1 !important;
+        position: relative;
+        margin: 0 auto 40px; } }
+  .stats-ctr .stat-header {
+    display: block;
+    font-family: "Roboto Mono";
+    font-size: 14px;
+    color: #D3ECFA; }
+    .stats-ctr .stat-header:last-of-type {
+      margin-top: 28px; }
+      @media screen and (max-width: 640px) {
+        .stats-ctr .stat-header:last-of-type {
+          margin-top: 10px; } }
+  .stats-ctr .stats {
+    display: flex;
+    justify-content: space-between; }
+    .stats-ctr .stats .statistic {
+      font-size: 24px;
+      display: inline-flex;
+      flex-direction: column;
+      font-family: "Lato";
+      font-weight: bold; }
+      @media screen and (max-width: 640px) {
+        .stats-ctr .stats .statistic {
+          font-size: 18px; } }
+      .stats-ctr .stats .statistic .stat-type {
+        font-size: 14px;
+        color: #D3ECFA;
+        font-family: "Roboto Mono"; }
+  @media screen and (max-width: 640px) {
+    .stats-ctr {
+      top: 10px;
+      right: 15px;
+      width: 60vw;
+      left: auto;
+      width: 50vw; } }
+
+.fp-viewing-one-0 .stats-ctr,
+.fp-viewing-one-7 .stats-ctr {
+  opacity: 0; }
+
+@media screen and (max-width: 640px) {
+  .fp-viewion-one-7 {
+    opacity: 1; } }
+
+.slide-body {
+  width: 50vw;
+  margin: auto;
+  position: relative;
+  text-align: left; }
+  .slide-body h2 {
+    font-size: 48px; }
+  .slide-body p {
+    font-size: 22px; }
+  .slide-body .pull-up {
+    margin-top: -44px; }
+  .slide-body strong {
+    color: #ead69d; }
+  .slide-body .slide-img {
+    height: 28vh;
+    text-align: right; }
+    .slide-body .slide-img.slide-img-center {
+      text-align: center; }
+    .slide-body .slide-img img {
+      height: 100%; }
+  @media screen and (max-width: 640px) {
+    .slide-body {
+      width: calc(80vw);
+      margin: auto; }
+      .slide-body h2 {
+        font-size: 24px; }
+      .slide-body p {
+        font-size: 18px; } }
+
+.slide-lower {
+  position: absolute;
+  bottom: -10vh;
+  height: 0;
+  width: 100vw;
+  z-index: -1;
+  margin-left: -20px; }
+  @media screen and (max-width: 640px) {
+    .slide-lower {
+      position: relative;
+      width: auto;
+      height: auto;
+      margin-left: auto;
+      padding-bottom: 20vw; } }
+  .slide-lower ul {
+    margin: auto; }
+    @media screen and (max-width: 640px) {
+      .slide-lower ul {
+        width: 70% !important; } }
+    .slide-lower ul li {
+      list-style: none;
+      transition: all .3s ease-in-out;
+      text-align: left;
+      display: flex;
+      margin-bottom: 24px; }
+      .slide-lower ul li:last-of-type > div {
+        border-bottom: transparent; }
+      .slide-lower ul li.active {
+        opacity: 1; }
+      .slide-lower ul li .song-info {
+        opacity: .6; }
+      .slide-lower ul li img {
+        width: 68px;
+        margin-right: 45px;
+        height: 68px; }
+      .slide-lower ul li > div {
+        width: calc(100% - 113px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
+
+.slide {
+  transition: margin .3s ease-in-out;
+  position: relative; }
+  .slide.slided-down {
+    margin-top: -99vh; }
+
+.middle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 2px;
+  height: 100vh;
+  top: 0;
+  background-color: hotpink; }
+
+@media screen and (max-width: 640px) {
+  .mobile-hide {
+    display: none; } }
+
+.quiz .answers-ctr {
+  text-align: left; }
+
+.answer {
+  display: block;
+  position: relative;
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 22px 0;
+  text-align: center;
+  padding: 14px;
+  transition: color .3s ease-in-out;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 18px; }
+  .answer:hover {
+    color: black; }
+  .answer .circle {
+    display: inline-block;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 24px;
+    width: 24px;
+    background-color: #E7E4E4;
+    border-radius: 50%; }
+    .answer .circle svg {
+      opacity: 0;
+      transition: opacity .3s ease-in-out; }
+  .answer.show svg {
+    opacity: 1;
+    height: 100%; }
+
+#bg-ctr {
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  overflow: hidden; }
+  @media screen and (max-width: 640px) {
+    #bg-ctr {
+      height: calc(100% - 20px);
+      width: calc(100vw - 20px);
+      top: 10px;
+      left: 10px; } }
+  #bg-ctr #bg-gradients .bg-gradient {
+    transition: opacity .5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw; }
+  #bg-ctr #bg-gradients .gradient-1 {
+    background: linear-gradient(301deg, #c5d4da 0%, #0e253b 100%); }
+  #bg-ctr #bg-gradients .gradient-2 {
+    background: linear-gradient(329deg, #d0b5ae 0%, #342232 100%); }
+  #bg-ctr #bg-gradients .gradient-3 {
+    background: linear-gradient(329deg, #ccc0c3 0%, #464340 100%); }
+  #bg-ctr #bg-gradients .gradient-4 {
+    background: linear-gradient(329deg, #d8cdcb 0%, #1f355e 100%); }
+  #bg-ctr #bg-gradients .gradient-5 {
+    background: linear-gradient(329deg, #cfcec9 0%, #445974 100%); }
+  #bg-ctr #bg-gradients .gradient-6 {
+    background: linear-gradient(329deg, #cecfc4 0%, #ba2521 100%); }
+  #bg-ctr #bg-gradients .gradient-7 {
+    background: linear-gradient(329deg, #DACCC2 0%, #385A28 100%); }
+  #bg-ctr #bg-gradients .gradient-8 {
+    background: linear-gradient(301deg, #c5d4da 0%, #0e253b 100%); }
+  #bg-ctr #bg-gradients.show-1 .gradient-1 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-2 .gradient-2 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-3 .gradient-3 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-4 .gradient-4 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-5 .gradient-5 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-6 .gradient-6 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-7 .gradient-7 {
+    opacity: 1; }
+  #bg-ctr #bg-gradients.show-8 .gradient-8 {
+    opacity: 1; }
+
+#background {
+  height: 100%;
+  width: 10000vh;
+  position: absolute;
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+  font-size: 0;
+  transition: all 1s ease-in-out; }
+  @media screen and (max-width: 640px) {
+    #background {
+      max-height: 100vh; } }
+  #background .bg {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    overflow: hidden; }
+    #background .bg.active .poly-1 .poly,
+    #background .bg.active .poly-2 .poly,
+    #background .bg.active .poly-3 .poly {
+      transform: translateX(0); }
+    #background .bg.before .poly-1 .poly {
+      transform: translateX(-30%); }
+    #background .bg.before .poly-2 .poly {
+      transform: translateX(-60%); }
+    #background .bg.before .poly-3 .poly {
+      transform: translateX(-100%); }
+    #background .bg.after .poly-1 .poly {
+      transform: translateX(30%); }
+    #background .bg.after .poly-2 .poly {
+      transform: translateX(60%); }
+    #background .bg.after .poly-3 .poly {
+      transform: translateX(100%); }
+  #background .bg-1 .poly-1 {
+    left: -10%;
+    bottom: 20px;
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-1 .poly-2 {
+    right: -500px;
+    bottom: -750px;
+    -webkit-animation: rotateRight 500s linear infinite;
+            animation: rotateRight 500s linear infinite; }
+  #background .bg-1 .poly-3 {
+    top: -100px;
+    right: 200px;
+    -webkit-animation: rotateLeft 200s linear infinite;
+            animation: rotateLeft 200s linear infinite; }
+  #background .bg-1 .poly svg {
+    fill: #ed8460; }
+  #background .bg-2 .poly-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-2 .poly-2 {
+    top: -400px;
+    left: 400px;
+    -webkit-animation: rotateRight 1000s linear infinite;
+            animation: rotateRight 1000s linear infinite; }
+  #background .bg-2 .poly-3 {
+    bottom: -800px;
+    left: -600px;
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-2 .poly svg {
+    fill: #d286da; }
+  #background .bg-3 .poly-1 {
+    top: 47px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #background .bg-3 .poly-2 {
+    top: -400px;
+    left: 400px; }
+  #background .bg-3 .poly-3 {
+    bottom: -800px;
+    left: -600px; }
+  #background .bg-3 .poly svg {
+    fill: #c2d6d6; }
+  #background .bg-4 .poly-1 {
+    top: 47px;
+    left: 50%;
+    transform: translateX(-50%); }
+  #background .bg-4 .poly-2 {
+    top: -400px;
+    left: 400px; }
+  #background .bg-4 .poly-3 {
+    bottom: -800px;
+    left: -600px; }
+  #background .bg-4 .poly svg {
+    fill: #ead69d; }
+  #background .bg-5 .poly-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-5 .poly-2 {
+    top: -400px;
+    left: 400px;
+    -webkit-animation: rotateRight 1000s linear infinite;
+            animation: rotateRight 1000s linear infinite; }
+  #background .bg-5 .poly-3 {
+    bottom: -800px;
+    left: -600px;
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-5 .poly svg {
+    fill: #d286da; }
+  #background .bg-6 .poly-1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-6 .poly-2 {
+    top: -400px;
+    left: 400px;
+    -webkit-animation: rotateRight 1000s linear infinite;
+            animation: rotateRight 1000s linear infinite; }
+  #background .bg-6 .poly-3 {
+    bottom: -800px;
+    left: -600px;
+    -webkit-animation: rotateLeft 1000s linear infinite;
+            animation: rotateLeft 1000s linear infinite; }
+  #background .bg-6 .poly svg {
+    fill: #b2cbcb; }
+  #background .poly-1,
+  #background .poly-2,
+  #background .poly-3 {
+    position: absolute; }
+
+.bg-grain {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: .3; }
+
+@-webkit-keyframes rotateLeft {}
+
+@keyframes rotateLeft {}@-webkit-keyframes rotateRight {}@keyframes rotateRight {}#home {
+  position: relative;
+  text-align: center; }
+  #home .background-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .3s ease-in-out;
+    width: 75vw;
+    z-index: -1; }
+    #home .background-text h4 {
+      font-size: 32px;
+      transition: all .3s ease-in-out; }
+  #home h1 {
+    transition: all .3s ease-in-out;
+    font-size: 52px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 640px) {
+      #home h1 {
+        top: 43%;
+        font-size: 24px; } }
+  #home .home-info {
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); }
+    @media screen and (max-width: 640px) {
+      #home .home-info {
+        width: 90%; } }
+    #home .home-info a {
+      font-size: 16px;
+      color: #D3ECFA; }
+  #home.show-home h1 {
+    font-size: 32px;
+    top: 40%; }
+  #home.show-home .background-text {
+    width: 20vw;
+    top: 40%; }
+    #home.show-home .background-text h4 {
+      display: none; }
+    @media screen and (max-width: 640px) {
+      #home.show-home .background-text {
+        width: 75vw; } }
+  #home.show-home h1 {
+    font-size: 35px; }
+  #home.show-home .home-info {
+    opacity: 1; }
+
+.poly {
+  position: relative;
+  display: block;
+  transition: transform 1.5s ease-in-out; }
+
+.poly svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: spinRight 25s linear infinite;
+          animation: spinRight 25s linear infinite; }
+
+.poly svg:first-child {
+  opacity: 0.5;
+  -webkit-animation: spinLeft 25s linear infinite;
+          animation: spinLeft 25s linear infinite; }
+
+@-webkit-keyframes spinRight {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes spinRight {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes spinLeft {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes spinLeft {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+.poly-sm {
+  height: 100px;
+  width: 100px; }
+
+.poly-md {
+  height: 250px;
+  width: 250px; }
+
+.poly-lg {
+  height: 500px;
+  width: 500px; }
+
+.poly-xlg {
+  height: 1000px;
+  width: 1000px; }
+
+.logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 97px;
+  transition: opacity .3s ease-in-out; }
+  @media screen and (max-width: 640px) {
+    .logo {
+      width: 50px;
+      opacity: 0; } }
+
+@media screen and (max-width: 640px) {
+  .fp-viewing-one-0 .logo,
+  .fp-viewing-one-7 .logo {
+    opacity: 1; } }
+
+.up-arrow,
+.down-arrow {
+  width: 100%;
+  text-align: center; }
+  @media screen and (max-width: 640px) {
+    .up-arrow,
+    .down-arrow {
+      display: none; } }
+
+.down-arrow {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  color: #fff; }
+  .social-icon svg {
+    margin: 0 10px 0 40px; }
+    @media screen and (max-width: 640px) {
+      .social-icon svg {
+        margin: 0 10px 0 10px; } }
+  .social-icon:first-of-type svg {
+    margin-left: 0; }
+
+#lyrics .before-answer,
+#lyrics .after-answer {
+  transition: opacity .3s ease-in-out; }
+
+#lyrics .before-answer.hide {
+  opacity: 0; }
+
+#lyrics .before-answer.display-none {
+  display: none; }
+
+#lyrics .after-answer {
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  font-size: 22px;
+  width: 80%; }
+  @media screen and (max-width: 640px) {
+    #lyrics .after-answer {
+      width: 100%; } }
+  #lyrics .after-answer.show {
+    opacity: 1; }
+
+#lyrics .slide-body {
+  position: relative; }
+  #lyrics .slide-body .left {
+    width: 70%;
+    text-align: left; }
+    @media screen and (max-width: 640px) {
+      #lyrics .slide-body .left {
+        width: 100%; } }
+    #lyrics .slide-body .left .answer {
+      display: inline-block;
+      width: 70%;
+      padding-left: 55px; }
+      @media screen and (max-width: 640px) {
+        #lyrics .slide-body .left .answer {
+          width: 100%;
+          margin-top: 0; } }
+  #lyrics .slide-body .right {
+    padding-right: 100px;
+    position: relative;
+    position: absolute;
+    height: 80vh;
+    top: 0;
+    right: 50%;
+    z-index: -1; }
+    #lyrics .slide-body .right img {
+      position: absolute;
+      top: 0;
+      left: -50%;
+      max-width: none;
+      height: 70%; }
+    @media screen and (max-width: 640px) {
+      #lyrics .slide-body .right {
+        display: none; } }
+
+#final {
+  position: relative; }
+  #final .slide-body {
+    margin-top: -34px; }
+  #final .slide-img {
+    text-align: left; }
+  #final .gradient-1 {
+    position: absolute;
+    width: 100%;
+    height: 30vh;
+    left: 0;
+    box-shadow: -2px 3px 25px NaNpx rgba(0, 0, 0, 0.18);
+    background: linear-gradient(301deg, #c5d4da 0%, #0e253b 100%); }
+
+#viral .slide-img {
+  position: relative;
+  z-index: -1; }
+
+#viral .answers-ctr {
+  display: flex;
+  justify-content: space-between; }
+  @media screen and (max-width: 640px) {
+    #viral .answers-ctr {
+      display: block; } }
+  #viral .answers-ctr .answer {
+    width: 48%;
+    display: inline-block; }
+    @media screen and (max-width: 640px) {
+      #viral .answers-ctr .answer {
+        margin-top: 0;
+        width: 100%; } }
+
+#viral #blurry,
+#viral #clear {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+#viral #clear {
+  opacity: 0;
+  transition: opacity .8s ease-in-out; }
+  #viral #clear.show {
+    opacity: 1; }
+
+#viral .before-answer,
+#viral .after-answer {
+  transition: opacity .3s ease-in-out; }
+
+#viral .before-answer.hide {
+  opacity: 0; }
+
+#viral .before-answer.display-none {
+  display: none; }
+
+#viral .after-answer {
+  opacity: 0;
+  transition: opacity .3s ease-in-out; }
+  #viral .after-answer.show {
+    opacity: 1; }
+  #viral .after-answer p {
+    font-size: 22px; }
+    @media screen and (max-width: 640px) {
+      #viral .after-answer p {
+        font-size: 18px; } }
+
+#chart .bars {
+  display: flex;
+  height: 25vh;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 70%;
+  margin: auto; }
+  @media screen and (max-width: 640px) {
+    #chart .bars {
+      width: 100%; } }
+  #chart .bars .bar-ctr {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #FEEB8F; }
+    @media screen and (max-width: 640px) {
+      #chart .bars .bar-ctr .time {
+        text-align: center; } }
+    #chart .bars .bar-ctr .bar {
+      height: 100%;
+      width: 20px;
+      margin-top: 22px;
+      border-top-left-radius: 9999px;
+      border-top-right-radius: 9999px;
+      background: linear-gradient(0deg, #FFEB8F 0%, #2DC5B5 100%);
+      background-color: #1FCD30; }
+
+/* Utilities
+   ========================================================================== */
+/* ==========================================================================
+   #BRANDING
+   ========================================================================== */
+/* Floats
+   ========================================================================== */
+.u-float-left {
+  float: left; }
+
+.u-float-right {
+  float: right; }
+
+/* Responsive
+   ========================================================================== */
+/* ==========================================================================
+   #TYPOGRAPHY
+   ========================================================================== */
+/* Typography properties
+   ========================================================================== */
+/* Alignment
+   ========================================================================== */
+.u-align-left {
+  text-align: left; }
+
+.u-align-center {
+  text-align: center; }
+
+.u-align-right {
+  text-align: right; }
+
+/* Sizes
+   ========================================================================== */
+.u-deci {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.4; }
+
+.u-centi {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6; }
+
+/* Responsive
+   ========================================================================== */
+.u-btn {
+  padding: 14px 58px;
+  text-decoration: none;
+  border-radius: 9999px;
+  display: inline-block; }
+  .u-btn.login {
+    color: #fff;
+    background-color: #00549B;
+    margin: 34px auto 17px; }
+
+/* ==========================================================================
+   #WIDTHS
+   ========================================================================== */
+/**
+ * inuitcss generates a series of utility classes that give a fluid width to
+ * whichever element they’re applied, e.g.:
+ *
+ *   <img src="" alt="" class="u-1/2" />
+ *
+ * These classes are most commonly used in conjunction with our layout system,
+ * e.g.:
+ *
+ *   <div class="o-layout__item  u-1/2">
+ *
+ * By default, inuitcss will also generate responsive variants of each of these
+ * classes by using your Sass MQ configuration, e.g.:
+ *
+ *   <div class="o-layout__item  u-1/1  u-1/2@tablet  u-1/3@desktop">
+ *
+ * Optionally, inuitcss can generate offset classes which can push and pull
+ * elements left and right by a specified amount, e.g.:
+ *
+ *   <div class="o-layout__item  u-2/3  u-pull-1/3">
+ *
+ * This is useful for making very granular changes to the rendered order of
+ * items in a layout.
+ *
+ * N.B. This option is turned off by default.
+ */
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes take a fraction-like format (e.g. `.u-2/3`). Use these in
+ * your markup:
+ *
+ * <div class="u-7/12">
+ *
+ * The following will generate widths helper classes based on the fractions
+ * defined in the `$inuit-fractions` list.
+ */
+.u-1\/1 {
+  width: 100% !important; }
+
+.u-1\/2 {
+  width: 50% !important; }
+
+.u-2\/2 {
+  width: 100% !important; }
+
+.u-1\/3 {
+  width: 33.33333% !important; }
+
+.u-2\/3 {
+  width: 66.66667% !important; }
+
+.u-3\/3 {
+  width: 100% !important; }
+
+.u-1\/4 {
+  width: 25% !important; }
+
+.u-2\/4 {
+  width: 50% !important; }
+
+.u-3\/4 {
+  width: 75% !important; }
+
+.u-4\/4 {
+  width: 100% !important; }
+
+.u-1\/5 {
+  width: 20% !important; }
+
+.u-2\/5 {
+  width: 40% !important; }
+
+.u-3\/5 {
+  width: 60% !important; }
+
+.u-4\/5 {
+  width: 80% !important; }
+
+.u-5\/5 {
+  width: 100% !important; }
+
+/**
+ * If we’re using Sass-MQ, automatically generate grid system(s) for each of our
+ * defined breakpoints, and give them a Responsive Suffix, e.g.:
+ *
+ * <div class="u-3/12@mobile">
+ */
+@media (min-width: 20em) {
+  .u-1\/1\@mobile {
+    width: 100% !important; }
+  .u-1\/2\@mobile {
+    width: 50% !important; }
+  .u-2\/2\@mobile {
+    width: 100% !important; }
+  .u-1\/3\@mobile {
+    width: 33.33333% !important; }
+  .u-2\/3\@mobile {
+    width: 66.66667% !important; }
+  .u-3\/3\@mobile {
+    width: 100% !important; }
+  .u-1\/4\@mobile {
+    width: 25% !important; }
+  .u-2\/4\@mobile {
+    width: 50% !important; }
+  .u-3\/4\@mobile {
+    width: 75% !important; }
+  .u-4\/4\@mobile {
+    width: 100% !important; }
+  .u-1\/5\@mobile {
+    width: 20% !important; }
+  .u-2\/5\@mobile {
+    width: 40% !important; }
+  .u-3\/5\@mobile {
+    width: 60% !important; }
+  .u-4\/5\@mobile {
+    width: 80% !important; }
+  .u-5\/5\@mobile {
+    width: 100% !important; } }
+
+@media (min-width: 46.25em) {
+  .u-1\/1\@tablet {
+    width: 100% !important; }
+  .u-1\/2\@tablet {
+    width: 50% !important; }
+  .u-2\/2\@tablet {
+    width: 100% !important; }
+  .u-1\/3\@tablet {
+    width: 33.33333% !important; }
+  .u-2\/3\@tablet {
+    width: 66.66667% !important; }
+  .u-3\/3\@tablet {
+    width: 100% !important; }
+  .u-1\/4\@tablet {
+    width: 25% !important; }
+  .u-2\/4\@tablet {
+    width: 50% !important; }
+  .u-3\/4\@tablet {
+    width: 75% !important; }
+  .u-4\/4\@tablet {
+    width: 100% !important; }
+  .u-1\/5\@tablet {
+    width: 20% !important; }
+  .u-2\/5\@tablet {
+    width: 40% !important; }
+  .u-3\/5\@tablet {
+    width: 60% !important; }
+  .u-4\/5\@tablet {
+    width: 80% !important; }
+  .u-5\/5\@tablet {
+    width: 100% !important; } }
+
+@media (min-width: 61.25em) {
+  .u-1\/1\@desktop {
+    width: 100% !important; }
+  .u-1\/2\@desktop {
+    width: 50% !important; }
+  .u-2\/2\@desktop {
+    width: 100% !important; }
+  .u-1\/3\@desktop {
+    width: 33.33333% !important; }
+  .u-2\/3\@desktop {
+    width: 66.66667% !important; }
+  .u-3\/3\@desktop {
+    width: 100% !important; }
+  .u-1\/4\@desktop {
+    width: 25% !important; }
+  .u-2\/4\@desktop {
+    width: 50% !important; }
+  .u-3\/4\@desktop {
+    width: 75% !important; }
+  .u-4\/4\@desktop {
+    width: 100% !important; }
+  .u-1\/5\@desktop {
+    width: 20% !important; }
+  .u-2\/5\@desktop {
+    width: 40% !important; }
+  .u-3\/5\@desktop {
+    width: 60% !important; }
+  .u-4\/5\@desktop {
+    width: 80% !important; }
+  .u-5\/5\@desktop {
+    width: 100% !important; } }
+
+@media (min-width: 81.25em) {
+  .u-1\/1\@wide {
+    width: 100% !important; }
+  .u-1\/2\@wide {
+    width: 50% !important; }
+  .u-2\/2\@wide {
+    width: 100% !important; }
+  .u-1\/3\@wide {
+    width: 33.33333% !important; }
+  .u-2\/3\@wide {
+    width: 66.66667% !important; }
+  .u-3\/3\@wide {
+    width: 100% !important; }
+  .u-1\/4\@wide {
+    width: 25% !important; }
+  .u-2\/4\@wide {
+    width: 50% !important; }
+  .u-3\/4\@wide {
+    width: 75% !important; }
+  .u-4\/4\@wide {
+    width: 100% !important; }
+  .u-1\/5\@wide {
+    width: 20% !important; }
+  .u-2\/5\@wide {
+    width: 40% !important; }
+  .u-3\/5\@wide {
+    width: 60% !important; }
+  .u-4\/5\@wide {
+    width: 80% !important; }
+  .u-5\/5\@wide {
+    width: 100% !important; } }
+
+/* ==========================================================================
+   #SPACINGS
+   ========================================================================== */
+/**
+ * Utility classes to put specific spacing values onto elements. The below loop
+ * will generate us a suite of classes like:
+ *
+ *   .u-margin-top {}
+ *   .u-padding-left-large {}
+ *   .u-margin-right-small {}
+ *   .u-padding {}
+ *   .u-padding-right-none {}
+ *   .u-padding-horizontal {}
+ *   .u-padding-vertical-small {}
+ */
+.u-padding {
+  padding: 24px !important; }
+
+.u-padding-tiny {
+  padding: 6px !important; }
+
+.u-padding-small {
+  padding: 12px !important; }
+
+.u-padding-large {
+  padding: 48px !important; }
+
+.u-padding-huge {
+  padding: 96px !important; }
+
+.u-padding-none {
+  padding: 0 !important; }
+
+.u-padding-top {
+  padding-top: 24px !important; }
+
+.u-padding-top-tiny {
+  padding-top: 6px !important; }
+
+.u-padding-top-small {
+  padding-top: 12px !important; }
+
+.u-padding-top-large {
+  padding-top: 48px !important; }
+
+.u-padding-top-huge {
+  padding-top: 96px !important; }
+
+.u-padding-top-none {
+  padding-top: 0 !important; }
+
+.u-padding-right {
+  padding-right: 24px !important; }
+
+.u-padding-right-tiny {
+  padding-right: 6px !important; }
+
+.u-padding-right-small {
+  padding-right: 12px !important; }
+
+.u-padding-right-large {
+  padding-right: 48px !important; }
+
+.u-padding-right-huge {
+  padding-right: 96px !important; }
+
+.u-padding-right-none {
+  padding-right: 0 !important; }
+
+.u-padding-bottom {
+  padding-bottom: 24px !important; }
+
+.u-padding-bottom-tiny {
+  padding-bottom: 6px !important; }
+
+.u-padding-bottom-small {
+  padding-bottom: 12px !important; }
+
+.u-padding-bottom-large {
+  padding-bottom: 48px !important; }
+
+.u-padding-bottom-huge {
+  padding-bottom: 96px !important; }
+
+.u-padding-bottom-none {
+  padding-bottom: 0 !important; }
+
+.u-padding-left {
+  padding-left: 24px !important; }
+
+.u-padding-left-tiny {
+  padding-left: 6px !important; }
+
+.u-padding-left-small {
+  padding-left: 12px !important; }
+
+.u-padding-left-large {
+  padding-left: 48px !important; }
+
+.u-padding-left-huge {
+  padding-left: 96px !important; }
+
+.u-padding-left-none {
+  padding-left: 0 !important; }
+
+.u-padding-horizontal {
+  padding-left: 24px !important;
+  padding-right: 24px !important; }
+
+.u-padding-horizontal-tiny {
+  padding-left: 6px !important;
+  padding-right: 6px !important; }
+
+.u-padding-horizontal-small {
+  padding-left: 12px !important;
+  padding-right: 12px !important; }
+
+.u-padding-horizontal-large {
+  padding-left: 48px !important;
+  padding-right: 48px !important; }
+
+.u-padding-horizontal-huge {
+  padding-left: 96px !important;
+  padding-right: 96px !important; }
+
+.u-padding-horizontal-none {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.u-padding-vertical {
+  padding-top: 24px !important;
+  padding-bottom: 24px !important; }
+
+.u-padding-vertical-tiny {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important; }
+
+.u-padding-vertical-small {
+  padding-top: 12px !important;
+  padding-bottom: 12px !important; }
+
+.u-padding-vertical-large {
+  padding-top: 48px !important;
+  padding-bottom: 48px !important; }
+
+.u-padding-vertical-huge {
+  padding-top: 96px !important;
+  padding-bottom: 96px !important; }
+
+.u-padding-vertical-none {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
+.u-margin {
+  margin: 24px !important; }
+
+.u-margin-tiny {
+  margin: 6px !important; }
+
+.u-margin-small {
+  margin: 12px !important; }
+
+.u-margin-large {
+  margin: 48px !important; }
+
+.u-margin-huge {
+  margin: 96px !important; }
+
+.u-margin-none {
+  margin: 0 !important; }
+
+.u-margin-top {
+  margin-top: 24px !important; }
+
+.u-margin-top-tiny {
+  margin-top: 6px !important; }
+
+.u-margin-top-small {
+  margin-top: 12px !important; }
+
+.u-margin-top-large {
+  margin-top: 48px !important; }
+
+.u-margin-top-huge {
+  margin-top: 96px !important; }
+
+.u-margin-top-none {
+  margin-top: 0 !important; }
+
+.u-margin-right {
+  margin-right: 24px !important; }
+
+.u-margin-right-tiny {
+  margin-right: 6px !important; }
+
+.u-margin-right-small {
+  margin-right: 12px !important; }
+
+.u-margin-right-large {
+  margin-right: 48px !important; }
+
+.u-margin-right-huge {
+  margin-right: 96px !important; }
+
+.u-margin-right-none {
+  margin-right: 0 !important; }
+
+.u-margin-bottom {
+  margin-bottom: 24px !important; }
+
+.u-margin-bottom-tiny {
+  margin-bottom: 6px !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 12px !important; }
+
+.u-margin-bottom-large {
+  margin-bottom: 48px !important; }
+
+.u-margin-bottom-huge {
+  margin-bottom: 96px !important; }
+
+.u-margin-bottom-none {
+  margin-bottom: 0 !important; }
+
+.u-margin-left {
+  margin-left: 24px !important; }
+
+.u-margin-left-tiny {
+  margin-left: 6px !important; }
+
+.u-margin-left-small {
+  margin-left: 12px !important; }
+
+.u-margin-left-large {
+  margin-left: 48px !important; }
+
+.u-margin-left-huge {
+  margin-left: 96px !important; }
+
+.u-margin-left-none {
+  margin-left: 0 !important; }
+
+.u-margin-horizontal {
+  margin-left: 24px !important;
+  margin-right: 24px !important; }
+
+.u-margin-horizontal-tiny {
+  margin-left: 6px !important;
+  margin-right: 6px !important; }
+
+.u-margin-horizontal-small {
+  margin-left: 12px !important;
+  margin-right: 12px !important; }
+
+.u-margin-horizontal-large {
+  margin-left: 48px !important;
+  margin-right: 48px !important; }
+
+.u-margin-horizontal-huge {
+  margin-left: 96px !important;
+  margin-right: 96px !important; }
+
+.u-margin-horizontal-none {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
+
+.u-margin-vertical {
+  margin-top: 24px !important;
+  margin-bottom: 24px !important; }
+
+.u-margin-vertical-tiny {
+  margin-top: 6px !important;
+  margin-bottom: 6px !important; }
+
+.u-margin-vertical-small {
+  margin-top: 12px !important;
+  margin-bottom: 12px !important; }
+
+.u-margin-vertical-large {
+  margin-top: 48px !important;
+  margin-bottom: 48px !important; }
+
+.u-margin-vertical-huge {
+  margin-top: 96px !important;
+  margin-bottom: 96px !important; }
+
+.u-margin-vertical-none {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important; }
+
+/* ==========================================================================
+   #PRINT
+   ========================================================================== */
+/**
+ * Very crude, reset-like styles taken from the HTML5 Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/5.3.0/dist/doc/css.md#print-styles
+ * https://github.com/h5bp/html5-boilerplate/blob/master/dist/css/main.css#L205-L282
+ */
+@media print {
+  /**
+   * 1. Black prints faster: http://www.sanbeiji.com/archives/953
+   */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* [1] */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /**
+   * Don’t show links that are fragment identifiers, or use the `javascript:`
+   * pseudo protocol.
+   */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /**
+   * Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
